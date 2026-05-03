@@ -178,11 +178,11 @@ export function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
-                <div className="font-sans font-semibold text-2xl mb-1">300%</div>
+                <div className="font-sans font-semibold text-2xl mb-1">X%</div>
                 <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Audience Growth</div>
               </div>
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
-                <div className="font-sans font-semibold text-2xl mb-1">$4M+</div>
+                <div className="font-sans font-semibold text-2xl mb-1">$YM+</div>
                 <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Pipeline Generated</div>
               </div>
             </div>
