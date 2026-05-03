@@ -1,0 +1,236 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .wrap { display: grid; grid-template-columns: 200px 1fr; gap: 0; background: #0D0C08; border-radius: 14px; overflow: hidden; min-height: 600px; }
+  .sidebar { border-right: 0.5px solid rgba(242,239,216,0.1); padding: 24px 0; }
+  .page-tab { padding: 10px 20px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(242,239,216,0.35); cursor: pointer; transition: all 0.2s; border-left: 2px solid transparent; font-family: 'DM Mono', monospace; }
+  .page-tab:hover { color: rgba(242,239,216,0.7); background: rgba(242,239,216,0.04); }
+  .page-tab.active { color: #F2EFD8; border-left-color: #F2EFD8; background: rgba(242,239,216,0.06); }
+  .sidebar-label { padding: 20px 20px 8px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,239,216,0.2); font-family: 'DM Mono', monospace; }
+  .content { padding: 24px 28px; overflow-y: auto; }
+  .page-view { display: none; }
+  .page-view.active { display: block; }
+  .section-block { border: 0.5px solid rgba(242,239,216,0.12); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; position: relative; cursor: default; }
+  .section-block:hover { border-color: rgba(242,239,216,0.25); background: rgba(242,239,216,0.03); }
+  .section-block.cta-section { border-color: rgba(242,239,216,0.3); background: rgba(242,239,216,0.05); }
+  .sb-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .sb-name { font-size: 12px; font-weight: 600; color: #F2EFD8; }
+  .sb-tag { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'DM Mono', monospace; padding: 3px 8px; border-radius: 999px; }
+  .tag-conversion { background: rgba(242,239,216,0.15); color: #F2EFD8; }
+  .tag-trust { background: rgba(91,143,107,0.2); color: #8fc49e; }
+  .tag-proof { background: rgba(100,120,180,0.2); color: #9aaee0; }
+  .tag-desire { background: rgba(180,120,80,0.2); color: #d4a070; }
+  .tag-nav { background: rgba(242,239,216,0.08); color: rgba(242,239,216,0.5); }
+  .sb-desc { font-size: 11px; color: rgba(242,239,216,0.45); line-height: 1.5; }
+  .sb-elements { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .el { font-size: 10px; background: rgba(242,239,216,0.06); border: 0.5px solid rgba(242,239,216,0.12); color: rgba(242,239,216,0.5); padding: 3px 8px; border-radius: 4px; }
+  .connector { display: flex; align-items: center; justify-content: center; height: 14px; margin: 0 0 0 20px; }
+  .conn-line { width: 0.5px; height: 14px; background: rgba(242,239,216,0.15); }
+  .funnel-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: rgba(242,239,216,0.45); font-family: 'DM Mono', monospace; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .page-title { font-size: 11px; font-weight: 600; color: rgba(242,239,216,0.5); letter-spacing: 0.1em; text-transform: uppercase; font-family: 'DM Mono', monospace; margin-bottom: 14px; }
+  .component-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .comp-card { background: rgba(242,239,216,0.03); border: 0.5px solid rgba(242,239,216,0.1); border-radius: 8px; padding: 12px 14px; }
+  .comp-name { font-size: 12px; font-weight: 600; color: #F2EFD8; margin-bottom: 4px; }
+  .comp-desc { font-size: 11px; color: rgba(242,239,216,0.4); line-height: 1.5; }
+  .comp-tech { font-size: 10px; font-family: 'DM Mono', monospace; color: rgba(242,239,216,0.3); margin-top: 6px; }
+  .route-list { display: flex; flex-direction: column; gap: 8px; }
+  .route-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(242,239,216,0.03); border: 0.5px solid rgba(242,239,216,0.1); border-radius: 8px; }
+  .route-path { font-family: 'DM Mono', monospace; font-size: 11px; color: #F2EFD8; min-width: 130px; }
+  .route-page { font-size: 11px; color: rgba(242,239,216,0.5); }
+  .route-note { font-size: 10px; color: rgba(242,239,216,0.25); margin-left: auto; font-family: 'DM Mono', monospace; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden">Elevative site layout and structure planner</h2>
+
+<div class="wrap">
+  <div class="sidebar">
+    <div class="sidebar-label">Pages</div>
+    <div class="page-tab active" onclick="show('home')">Home</div>
+    <div class="page-tab" onclick="show('work')">Work</div>
+    <div class="page-tab" onclick="show('services')">Services</div>
+    <div class="page-tab" onclick="show('about')">About</div>
+    <div class="page-tab" onclick="show('book')">Book a Call</div>
+    <div class="sidebar-label" style="margin-top:12px;">Architecture</div>
+    <div class="page-tab" onclick="show('components')">Components</div>
+    <div class="page-tab" onclick="show('routes')">Routes</div>
+  </div>
+
+  <div class="content">
+
+    <div class="page-view active" id="view-home">
+      <div class="page-title">Home — funnel layout</div>
+      <div class="funnel-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#F2EFD8;opacity:0.8"></div>Conversion</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8fc49e"></div>Trust</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#9aaee0"></div>Proof</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#d4a070"></div>Desire</div>
+      </div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Nav</div><span class="sb-tag tag-nav">Sticky</span></div>
+        <div class="sb-desc">Logo · Work · Services · About · Book a Call</div>
+        <div class="sb-elements"><span class="el">Sticky on scroll</span><span class="el">CTA always visible</span><span class="el">Mobile hamburger</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block cta-section">
+        <div class="sb-top"><div class="sb-name">Hero</div><span class="sb-tag tag-conversion">Conversion</span></div>
+        <div class="sb-desc">Aspirational headline · one-liner · single CTA</div>
+        <div class="sb-elements"><span class="el">Display headline</span><span class="el">Sub-headline</span><span class="el">Book a Call pill</span><span class="el">Trust micro-copy</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Social proof bar</div><span class="sb-tag tag-trust">Trust</span></div>
+        <div class="sb-desc">3–4 metrics or client logos. Credibility before scroll.</div>
+        <div class="sb-elements"><span class="el">Stat strip</span><span class="el">Logo row</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Who this is for</div><span class="sb-tag tag-desire">Desire</span></div>
+        <div class="sb-desc">3 personas / pain points — visitor self-identifies</div>
+        <div class="sb-elements"><span class="el">Founder</span><span class="el">Executive</span><span class="el">Creator</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Services overview</div><span class="sb-tag tag-desire">Desire</span></div>
+        <div class="sb-desc">3–4 pillars framed as outcomes, not features</div>
+        <div class="sb-elements"><span class="el">Build</span><span class="el">Grow</span><span class="el">Convert</span><span class="el">Links to /services</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Featured case study</div><span class="sb-tag tag-proof">Proof</span></div>
+        <div class="sb-desc">One transformation — before/after, real numbers</div>
+        <div class="sb-elements"><span class="el">Client name</span><span class="el">Result metric</span><span class="el">Pull quote</span><span class="el">Link to /work</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">The Elevative difference</div><span class="sb-tag tag-trust">Trust</span></div>
+        <div class="sb-desc">3–4 points on philosophy — why us, not anyone else</div>
+        <div class="sb-elements"><span class="el">Process points</span><span class="el">Brand voice</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Testimonials</div><span class="sb-tag tag-proof">Proof</span></div>
+        <div class="sb-desc">3 quotes · photo · name · niche</div>
+        <div class="sb-elements"><span class="el">Face + name</span><span class="el">Quote</span><span class="el">Result tag</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block cta-section">
+        <div class="sb-top"><div class="sb-name">Final CTA</div><span class="sb-tag tag-conversion">Conversion</span></div>
+        <div class="sb-desc">Close the page — urgency headline + call explainer</div>
+        <div class="sb-elements"><span class="el">30-min call framing</span><span class="el">Book a Call pill</span></div>
+      </div>
+      <div class="connector"><div class="conn-line"></div></div>
+
+      <div class="section-block">
+        <div class="sb-top"><div class="sb-name">Footer</div><span class="sb-tag tag-nav">Footer</span></div>
+        <div class="sb-desc">Links · socials · © Elevative</div>
+      </div>
+    </div>
+
+    <div class="page-view" id="view-work">
+      <div class="page-title">Work — case studies</div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Page hero</div></div><div class="sb-desc">Short headline + filter by industry/service type</div><div class="sb-elements"><span class="el">Headline</span><span class="el">Filter pills</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Case study grid</div><span class="sb-tag tag-proof">Proof</span></div><div class="sb-desc">Cards: client name · industry · headline result · thumbnail</div><div class="sb-elements"><span class="el">2-col grid</span><span class="el">Result metric on card</span><span class="el">Links to /work/:slug</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block cta-section"><div class="sb-top"><div class="sb-name">Bottom CTA</div><span class="sb-tag tag-conversion">Conversion</span></div><div class="sb-desc">Ready to be next? → Book a Call</div></div>
+
+      <div style="margin-top: 20px; padding-top: 16px; border-top: 0.5px solid rgba(242,239,216,0.08);">
+        <div class="page-title">Case study inner page (/work/:slug)</div>
+        <div class="section-block"><div class="sb-top"><div class="sb-name">Hero</div></div><div class="sb-desc">Client name · industry · 1-line result</div></div>
+        <div class="connector"><div class="conn-line"></div></div>
+        <div class="section-block"><div class="sb-top"><div class="sb-name">The problem</div></div><div class="sb-desc">What they came in with</div></div>
+        <div class="connector"><div class="conn-line"></div></div>
+        <div class="section-block"><div class="sb-top"><div class="sb-name">The approach</div></div><div class="sb-desc">Strategy + execution — what Elevative actually did</div></div>
+        <div class="connector"><div class="conn-line"></div></div>
+        <div class="section-block"><div class="sb-top"><div class="sb-name">Results</div><span class="sb-tag tag-proof">Proof</span></div><div class="sb-desc">Numbers, growth, outcomes — make them undeniable</div><div class="sb-elements"><span class="el">Metric cards</span><span class="el">Client quote</span></div></div>
+        <div class="connector"><div class="conn-line"></div></div>
+        <div class="section-block cta-section"><div class="sb-top"><div class="sb-name">CTA</div><span class="sb-tag tag-conversion">Conversion</span></div><div class="sb-desc">Want results like this? → Book a Call</div></div>
+      </div>
+    </div>
+
+    <div class="page-view" id="view-services">
+      <div class="page-title">Services</div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Page hero</div></div><div class="sb-desc">What we do — outcome-led headline</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Service 1 — Brand building</div><span class="sb-tag tag-desire">Desire</span></div><div class="sb-desc">What it is · what you get · who it's for</div><div class="sb-elements"><span class="el">Outcome headline</span><span class="el">Deliverables</span><span class="el">Enquire CTA</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Service 2 — Content & social</div><span class="sb-tag tag-desire">Desire</span></div><div class="sb-desc">What it is · what you get · who it's for</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Service 3 — Performance ads</div><span class="sb-tag tag-desire">Desire</span></div><div class="sb-desc">What it is · what you get · who it's for</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Service 4 — SEO & organic</div><span class="sb-tag tag-desire">Desire</span></div><div class="sb-desc">What it is · what you get · who it's for</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block cta-section"><div class="sb-top"><div class="sb-name">Bottom CTA</div><span class="sb-tag tag-conversion">Conversion</span></div><div class="sb-desc">Not sure which service? → Book a Call, we'll figure it out.</div></div>
+    </div>
+
+    <div class="page-view" id="view-about">
+      <div class="page-title">About</div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">The story</div><span class="sb-tag tag-trust">Trust</span></div><div class="sb-desc">Why Elevative exists — the founding belief</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Team</div><span class="sb-tag tag-trust">Trust</span></div><div class="sb-desc">Faces, names, roles — humanises the brand</div><div class="sb-elements"><span class="el">Photo</span><span class="el">Name + role</span><span class="el">1-line bio</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Values / way of working</div></div><div class="sb-desc">3–4 principles that set expectations</div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block cta-section"><div class="sb-top"><div class="sb-name">CTA</div><span class="sb-tag tag-conversion">Conversion</span></div><div class="sb-desc">Work with us → Book a Call</div></div>
+    </div>
+
+    <div class="page-view" id="view-book">
+      <div class="page-title">Book a Call</div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Header</div></div><div class="sb-desc">What to expect on the call — removes anxiety</div><div class="sb-elements"><span class="el">30 min</span><span class="el">No pitch pressure</span><span class="el">We map your strategy</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block cta-section"><div class="sb-top"><div class="sb-name">Calendly embed</div><span class="sb-tag tag-conversion">Conversion</span></div><div class="sb-desc">Inline embed — no redirect, no friction</div><div class="sb-elements"><span class="el">Calendly inline widget</span></div></div>
+      <div class="connector"><div class="conn-line"></div></div>
+      <div class="section-block"><div class="sb-top"><div class="sb-name">Reassurance strip</div><span class="sb-tag tag-trust">Trust</span></div><div class="sb-desc">A testimonial or stat below the embed — closes hesitators</div></div>
+    </div>
+
+    <div class="page-view" id="view-components">
+      <div class="page-title">Shared components</div>
+      <div class="component-grid">
+        <div class="comp-card"><div class="comp-name">Nav</div><div class="comp-desc">Sticky top bar with logo, links, CTA pill. Collapses to hamburger on mobile.</div><div class="comp-tech">React Router links · Framer Motion fade</div></div>
+        <div class="comp-card"><div class="comp-name">Footer</div><div class="comp-desc">Links, socials, copyright. Consistent across all pages.</div><div class="comp-tech">Static component</div></div>
+        <div class="comp-card"><div class="comp-name">CTA Section</div><div class="comp-desc">Reusable full-width CTA block. Headline + pill button. Used at bottom of every page.</div><div class="comp-tech">Props: headline, subline</div></div>
+        <div class="comp-card"><div class="comp-name">Testimonial Card</div><div class="comp-desc">Photo, name, quote, result tag. Used on home + case studies.</div><div class="comp-tech">Props: quote, name, result</div></div>
+        <div class="comp-card"><div class="comp-name">Case Study Card</div><div class="comp-desc">Thumbnail, client, result metric, link. Used in work grid.</div><div class="comp-tech">Props: slug, result, industry</div></div>
+        <div class="comp-card"><div class="comp-name">Section Label</div><div class="comp-desc">Vertical mono eyebrow text. Reusable across all sections.</div><div class="comp-tech">Props: number, label</div></div>
+        <div class="comp-card"><div class="comp-name">Reveal wrapper</div><div class="comp-desc">Framer Motion scroll-triggered upward reveal. Wraps any block.</div><div class="comp-tech">Intersection Observer · Framer</div></div>
+        <div class="comp-card"><div class="comp-name">Pill Button</div><div class="comp-desc">3 variants: fill, outline, ghost. Single component, variant prop.</div><div class="comp-tech">Props: variant, label, href</div></div>
+      </div>
+    </div>
+
+    <div class="page-view" id="view-routes">
+      <div class="page-title">React Router routes</div>
+      <div class="route-list">
+        <div class="route-row"><span class="route-path">/</span><span class="route-page">Home</span><span class="route-note">Entry point</span></div>
+        <div class="route-row"><span class="route-path">/work</span><span class="route-page">Case study grid</span><span class="route-note">Proof</span></div>
+        <div class="route-row"><span class="route-path">/work/:slug</span><span class="route-page">Case study detail</span><span class="route-note">Dynamic</span></div>
+        <div class="route-row"><span class="route-path">/services</span><span class="route-page">Services</span><span class="route-note">Detail</span></div>
+        <div class="route-row"><span class="route-path">/about</span><span class="route-page">About</span><span class="route-note">Trust</span></div>
+        <div class="route-row"><span class="route-path">/book</span><span class="route-page">Book a Call</span><span class="route-note">Conversion</span></div>
+        <div class="route-row" style="border-color: rgba(242,239,216,0.05);"><span class="route-path" style="opacity:0.35;">*</span><span class="route-page" style="opacity:0.35;">404 — redirect home</span><span class="route-note">Fallback</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function show(page) {
+  document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  document.getElementById('view-' + page).classList.add('active');
+}
+</script>
