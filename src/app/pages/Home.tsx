@@ -74,15 +74,15 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-8 overflow-hidden">
           <StaggerContainer className="flex flex-wrap md:flex-nowrap items-center justify-between gap-8 text-[#F2EFD8]">
             <StaggerItem className="flex flex-col gap-1 w-1/2 md:w-auto">
-              <span className="font-sans font-semibold text-3xl">40+</span>
+              <span className="font-sans font-semibold text-3xl">X+</span>
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#F2EFD8]/50">Brands Built</span>
             </StaggerItem>
             <StaggerItem className="flex flex-col gap-1 w-1/2 md:w-auto">
-              <span className="font-sans font-semibold text-3xl">3</span>
+              <span className="font-sans font-semibold text-3xl">Y</span>
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#F2EFD8]/50">Countries</span>
             </StaggerItem>
             <StaggerItem className="flex flex-col gap-1 w-full md:w-auto mt-4 md:mt-0">
-              <span className="font-sans font-semibold text-3xl">₹50+ Cr</span>
+              <span className="font-sans font-semibold text-3xl">₹Z+ Cr</span>
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#F2EFD8]/50">Audience Value Created</span>
             </StaggerItem>
           </StaggerContainer>
