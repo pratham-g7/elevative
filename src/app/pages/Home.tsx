@@ -20,7 +20,7 @@ export function Home() {
             </StaggerItem>
             <StaggerItem>
               <p className="text-[20px] font-sans font-medium tracking-[-0.01em] text-[#F2EFD8]/90 max-w-2xl mb-8">
-                We build creator brands that turn attention into authority, premium offers, and predictable demand.
+                We build creator brands that turn attention into revenue, premium offers, and predictable demand.
               </p>
             </StaggerItem>
             <StaggerItem className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
