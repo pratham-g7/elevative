@@ -56,6 +56,9 @@ export function Work() {
             <p className="text-[20px] font-sans text-[#F2EFD8]/65 max-w-2xl">
               We let our clients' outcomes speak for themselves. Here's what happens when you treat a personal brand like a business asset.
             </p>
+            <h1>
+              [SAMPLE TESTIMONIALS]
+            </h1>
           </UpwardReveal>
         </div>
       </section>

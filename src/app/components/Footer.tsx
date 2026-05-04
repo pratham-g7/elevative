@@ -10,7 +10,7 @@ export function Footer() {
         </div>
         
         <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] tracking-[0.2em] uppercase text-[#F2EFD8]/40">
-          <Link to="/work" className="hover:text-[#F2EFD8]/80 transition-colors">Our Work</Link>
+          <Link to="/work" className="hover:text-[#F2EFD8]/80 transition-colors">Testimonials</Link>
           <Link to="/services" className="hover:text-[#F2EFD8]/80 transition-colors">Services</Link>
           <Link to="/about" className="hover:text-[#F2EFD8]/80 transition-colors">About</Link>
           <a href="#" className="hover:text-[#F2EFD8]/80 transition-colors">LinkedIn</a>

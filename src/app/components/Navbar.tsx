@@ -53,7 +53,7 @@ export function Navbar() {
               to="/work"
               className="text-[13px] font-mono uppercase tracking-[0.1em] text-[#F2EFD8]/70 hover:text-[#F2EFD8] transition-colors"
             >
-              Our Work
+              Testimonials
             </Link>
             <Link
               to="/services"
@@ -119,7 +119,7 @@ export function Navbar() {
                 to="/work"
                 className="text-2xl font-sans font-medium text-[#F2EFD8]"
               >
-                Our Work
+                Testimonials
               </Link>
               <Link
                 to="/services"

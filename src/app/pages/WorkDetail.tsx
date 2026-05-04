@@ -98,7 +98,7 @@ export function WorkDetail() {
       <section className="relative px-6 md:px-12 lg:px-24 pt-24 pb-10">
         <div className="max-w-7xl mx-auto">
           <Link to="/work" className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.1em] text-[#F2EFD8]/40 hover:text-[#F2EFD8] transition-colors mb-12">
-            ← Back to Our Work
+            ← Back to Testimonials
           </Link>
           <UpwardReveal>
             <div className="flex items-center gap-4 mb-6">

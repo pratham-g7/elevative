@@ -170,6 +170,7 @@ export function Home() {
       <Section label="Featured Work" number="03" id="featured-work">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <UpwardReveal className="order-2 md:order-1">
+            <h2>[SAMPLE TESTIMONIAL]</h2>
             <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] mb-6">
               From local trainer to a premium fitness brand.
             </h2>
