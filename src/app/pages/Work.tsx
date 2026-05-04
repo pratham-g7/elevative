@@ -5,6 +5,7 @@ import { CaseStudyCard } from "../components/CaseStudyCard";
 import kriedMain from "../../imports/kried_main.png";
 import kriedLogo from "../../imports/kried_logo.jpg";
 import abhijitFace from "../../imports/abhijit_face.jpg";
+import abhijitMain from "../../imports/gupta_mix.png";
 import adamFace from "../../imports/adam_yu_photo.png";
 import adamMain from "../../imports/adam_yu_main.png";
 import chalantsFace from "../../imports/cu_chalants_photo.png";
@@ -25,7 +26,7 @@ export function Work() {
       client: "Abhijit Gupta",
       industry: "Popo Ventures",
       result: "Built a creator-led brand engine across 3 restaurants and lifted inbound demand by X%.",
-      imageUrl: "",
+      imageUrl: abhijitMain,
       logoUrl: abhijitFace,
       badgeClassName: "bg-transparent",
       badgeSizeClassName: "h-14 w-14",
