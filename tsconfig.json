@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Core */
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* React */
+    "jsx": "react-jsx",
+
+    /* Strictness */
+    "strict": true,
+
+    /* Vite-friendly */
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* DX */
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
