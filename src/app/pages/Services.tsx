@@ -1,3 +1,4 @@
+import { type ReactNode } from "react";
 import { Section } from "../components/Section";
 import { UpwardReveal, StaggerContainer, StaggerItem } from "../components/UpwardReveal";
 import { CTASection } from "../components/CTASection";
@@ -30,6 +31,37 @@ export function Services() {
     }
   ];
 
+  const serviceLabels: Record<string, ReactNode> = {
+    brand: (
+      <>
+        Brand Strategy
+        <br />
+        & Positioning
+      </>
+    ),
+    content: (
+      <>
+        Content
+        <br />
+        & Editorial
+      </>
+    ),
+    performance: (
+      <>
+        Performance
+        <br />
+        & Audience
+      </>
+    ),
+    conversion: (
+      <>
+        Monetization
+        <br />
+        & Conversion
+      </>
+    ),
+  };
+
   return (
     <div className="flex flex-col">
       <section className="relative px-6 md:px-12 lg:px-24 pt-24 pb-16">
@@ -43,7 +75,11 @@ export function Services() {
       </section>
 
       {services.map((service, i) => (
-        <Section key={service.id} label={service.title} number={`0${i + 1}`}>
+        <Section
+          key={service.id}
+          label={serviceLabels[service.id] ?? service.title}
+          number={`0${i + 1}`}
+        >
           <UpwardReveal className="max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-[-0.02em] mb-6 text-[#F2EFD8]">
               {service.desc}

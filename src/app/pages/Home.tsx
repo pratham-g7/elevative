@@ -121,7 +121,7 @@ export function Home() {
       <Section label="Services" number="02" id="services">
         <UpwardReveal className="mb-16 max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] mb-6">
-            We don’t just post for you. We build your entire ecosystem.
+            Four levers that turn <span className="emphasis">attention</span> into <span className="emphasis">revenue</span>.
           </h2>
         </UpwardReveal>
 
@@ -129,22 +129,22 @@ export function Home() {
           {[
             {
               name: "Brand Building",
-              outcome: "Clarity on exactly what you stand for and how you look.",
+              outcome: "Be instantly clear on who you are and why you win.",
               href: "/services"
             },
             {
               name: "Content & Social",
-              outcome: "High-leverage posts that build authority, not just likes.",
+              outcome: "Publish with a system that drives inbound, not likes.",
               href: "/services"
             },
             {
               name: "Performance & Audience",
-              outcome: "Targeted scaling to ensure the right people see you.",
+              outcome: "Put your best work in front of the right people.",
               href: "/services"
             },
             {
               name: "Monetization & Conversion",
-              outcome: "Turning your newfound attention into actual revenue.",
+              outcome: "Turn followers into paid offers and clients.",
               href: "/services"
             }
           ].map((service, i) => (
@@ -171,23 +171,23 @@ export function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <UpwardReveal className="order-2 md:order-1">
             <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] mb-6">
-              From invisible expert to category leader.
+              From local trainer to a premium fitness brand.
             </h2>
             <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7] mb-10">
-              We took a niche B2B founder and positioned him as the definitive voice in his space. The result? Media features, inbound investor interest, and a multi-million dollar pipeline—all organically.
+              We repositioned a gym trainer with a clear POV, rebuilt his content system, and packaged his offer. Within months, he was booking higher‑ticket clients and scaling beyond 1:1 sessions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
-                <div className="font-sans font-semibold text-2xl mb-1">X%</div>
-                <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Audience Growth</div>
+                <div className="font-sans font-semibold text-2xl mb-1">₹6L</div>
+                <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Monthly Revenue</div>
               </div>
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
-                <div className="font-sans font-semibold text-2xl mb-1">$YM+</div>
-                <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Pipeline Generated</div>
+                <div className="font-sans font-semibold text-2xl mb-1">+120k</div>
+                <div className="font-mono text-[10px] text-[#F2EFD8]/50 uppercase tracking-[0.1em]">Followers Added</div>
               </div>
             </div>
             <Button href="/work/case-study-1" variant="outline" className="px-6 py-3">
-              Read Case Study
+              See the Full Breakdown
             </Button>
           </UpwardReveal>
           
@@ -199,41 +199,6 @@ export function Home() {
             />
           </UpwardReveal>
         </div>
-      </Section>
-
-      {/* 6. The Elevative difference */}
-      <Section label="Our Philosophy" number="04" id="philosophy">
-        <UpwardReveal className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] max-w-2xl">
-            Why us, and not a standard PR agency.
-          </h2>
-        </UpwardReveal>
-
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          {[
-            {
-              title: "Editorial, Not Corporate",
-              desc: "We don't write generic thought leadership. We extract your actual insights and frame them with the sharpness of a high-end magazine."
-            },
-            {
-              title: "Process Over Fluff",
-              desc: "No vague promises. We operate on rigid sprints, data-backed decisions, and clear KPIs. We treat your brand like a product."
-            },
-            {
-              title: "Deep Empathy",
-              desc: "We understand your industry before we write a single word. If it doesn't sound exactly like you on your best day, we don't publish it."
-            },
-            {
-              title: "Conversion-Focused",
-              desc: "Followers are vanity metrics. We optimize everything for actual business outcomes: calls booked, deals closed, capital raised."
-            }
-          ].map((point, i) => (
-            <StaggerItem key={i}>
-              <h3 className="text-xl font-sans font-medium tracking-tight mb-3">{point.title}</h3>
-              <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7] max-w-md">{point.desc}</p>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </Section>
 
       {/* 7. Testimonials */}

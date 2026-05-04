@@ -91,3 +91,11 @@
     line-height: 1.5;
   }
 }
+
+@layer components {
+  .emphasis {
+    color: #FFF9E8;
+    background: linear-gradient(transparent 74%, rgba(255, 255, 255, 0.75) 74%, transparent 90%);
+    padding: 0 0.06em;
+  }
+}
