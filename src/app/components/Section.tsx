@@ -28,10 +28,10 @@ export function Section({
         {/* Vertical Sidebar */}
         <div className="md:w-12 flex-shrink-0 flex md:flex-col items-start gap-4">
           {(number || label) && (
-            <UpwardReveal className="flex items-center md:items-start md:flex-col gap-4 text-[#F2EFD8]/40 font-mono text-[10px] uppercase tracking-[0.2em] whitespace-nowrap" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
-              {number && <span style={{ writingMode: 'horizontal-tb', transform: 'rotate(180deg)' }}>{number}</span>}
-              {number && label && <span style={{ writingMode: 'horizontal-tb', transform: 'rotate(180deg)' }}>—</span>}
-              {label && <span style={{ transform: 'rotate(180deg)' }}>{label}</span>}
+            <UpwardReveal className="flex items-center md:items-start md:flex-col gap-4 text-[#F2EFD8]/40 font-mono text-[10px] uppercase tracking-[0.2em] whitespace-nowrap" style={{ writingMode: 'horizontal-tb' }}>
+              {number && <span>{number}</span>}
+              {number && label && <span>—</span>}
+              {label && <span>{label}</span>}
             </UpwardReveal>
           )}
         </div>
