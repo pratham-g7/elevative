@@ -37,8 +37,8 @@ export function Work() {
     {
       slug: "gym-influencer",
       client: "Adam Yu",
-      industry: "Gym Influencer",
-      result: "Introduced a 1:1 coaching program and started shortly hit $Zk/month through inbound leads.",
+      industry: "Fitness Creator",
+      result: "Turned content into inbound coaching leads and built a higher-ticket offer around his audience.",
       imageUrl: adamMain,
       logoUrl: adamFace,
       badgeClassName: "bg-transparent",
@@ -50,7 +50,7 @@ export function Work() {
     {
       slug: "meme-influencer",
       client: "CU Chalants",
-      industry: "Creator",
+      industry: "Content Creator",
       result: "Went from 0 to Yk followers in under 3 months.",
       imageUrl: chalantsMain,
       logoUrl: chalantsFace,
@@ -73,9 +73,6 @@ export function Work() {
             <p className="text-[20px] font-sans text-[#F2EFD8]/65 max-w-2xl">
               We let our clients' outcomes speak for themselves. Here's what happens when you treat a personal brand like a business asset.
             </p>
-            <h1>
-              [SAMPLE TESTIMONIALS]
-            </h1>
           </UpwardReveal>
         </div>
       </section>

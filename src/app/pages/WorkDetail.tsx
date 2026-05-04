@@ -5,6 +5,10 @@ import { CTASection } from "../components/CTASection";
 import kriedMain from "../../imports/kried_main.png";
 import kriedLogo from "../../imports/kried_logo.jpg";
 import abhijitFace from "../../imports/abhijit_face.jpg";
+import adamMain from "../../imports/adam_yu_main.png";
+import adamFace from "../../imports/adam_yu_photo.png";
+import chalantsMain from "../../imports/cu_chalants.png";
+import chalantsFace from "../../imports/cu_chalants_photo.png";
 import smashGuysLogo from "../../imports/smash_guys_logo.jpg";
 import smashGuysImage from "../../imports/smash_guys.png";
 import parisPaniniImage from "../../imports/paris_panini.png";
@@ -24,19 +28,23 @@ export function WorkDetail() {
     quoteTitle: string;
     imageUrl?: string;
     logoUrl?: string;
+    logoBadgeClassName?: string;
+    logoBadgePaddingClassName?: string;
+    logoBadgeRadiusClassName?: string;
+    logoBadgeImageClassName?: string;
     avatarUrl?: string;
     collageImages?: string[];
   }> = {
     "eat-kried": {
       title: "@eat.kried",
       tag: "Food Truck",
-      summary: "Added +Xk followers in Y months and lifted profile-driven demand by Z%.",
+      summary: "Grew the profile by +Xk in Y months and lifted profile-driven bookings by Z%.",
       problem:
-        "They had a product people loved, but no consistent demand engine. Content was sporadic, the brand story was unclear, and there was no system to turn attention into bookings.",
+        "Strong product but no repeatable demand engine — posting was inconsistent, the brand story was fragmented, and attention rarely converted to orders.",
       approach: [
-        "Clarified the brand voice and signature food narrative so every post had a consistent POV.",
-        "Built a weekly content system around menu drops, location updates, and behind-the-scenes hooks.",
-        "Mapped posts to a simple conversion path: profile -> location -> order."
+        "Rewrote the brand voice and crafted a signature food narrative so every post landed with clarity.",
+        "Launched a weekly content calendar focused on menu drops, location updates, and behind-the-scenes hooks.",
+        "Optimized CTAs and profile landing to reliably convert attention into orders."
       ],
       results: [
         { value: "+Xk", label: "Followers Added" },
@@ -48,19 +56,23 @@ export function WorkDetail() {
       quoteTitle: "Founders",
       imageUrl: kriedMain,
       logoUrl: kriedLogo,
-      avatarUrl: undefined,
+      avatarUrl: kriedLogo,
+      logoBadgeClassName: undefined,
+      logoBadgePaddingClassName: undefined,
+      logoBadgeRadiusClassName: undefined,
+      logoBadgeImageClassName: undefined,
       collageImages: undefined,
     },
     "abhijit-gupta": {
       title: "Abhijit Gupta",
       tag: "Popo Ventures",
-      summary: "Built a creator-led brand engine across 3 restaurants and lifted inbound demand by X%.",
+      summary: "Built a founder-led content engine across three restaurants and increased inbound visits by X%.",
       problem:
-        "Three strong restaurant brands, but no unified founder story and no consistent inbound system. Growth depended on ad hoc promos and platform trends.",
+        "Each restaurant had its own identity but no single thread to pull audiences through the portfolio; growth relied on sporadic promos and platform luck.",
       approach: [
-        "Positioned Abhijit as the public face behind Paris Panini, Smash Guys, and Pizza Bakery.",
-        "Built a content system that rotates each brand while reinforcing a single founder narrative.",
-        "Mapped content to local discovery: profile -> brand pages -> footfall and delivery."
+        "Led founder positioning so Abhijit became the narrative bridge across all three brands.",
+        "Rolled out a rotating content calendar that kept each concept visible while reinforcing the founder story.",
+        "Applied local discovery tactics to drive profile visitors into footfall and delivery conversions."
       ],
       results: [
         { value: "+X%", label: "Inbound Demand" },
@@ -72,8 +84,68 @@ export function WorkDetail() {
       quoteTitle: "Owner, Paris Panini • Smash Guys • Pizza Bakery",
       imageUrl: undefined,
       logoUrl: smashGuysLogo,
+      logoBadgeClassName: undefined,
+      logoBadgePaddingClassName: undefined,
+      logoBadgeRadiusClassName: undefined,
+      logoBadgeImageClassName: undefined,
       avatarUrl: abhijitFace,
       collageImages: [smashGuysImage, parisPaniniImage, pizzaBakeryImage],
+    },
+    "gym-influencer": {
+      title: "Adam Yu",
+      tag: "Fitness Creator",
+      summary: "Converted audience attention into Xk coaching leads and introduced a higher-ticket offer aligned to his audience.",
+      problem:
+        "Good reach, weak conversion — content attracted views but not a consistent lead flow for coaching revenue.",
+      approach: [
+        "Refocused content on client outcomes and transformation-led proof rather than generic tips.",
+        "Built an offer ladder and landing experience that moved casual viewers into coaching leads.",
+        "Implemented clear, repeatable CTAs and a tested follow-up flow to capture inbound interest."
+      ],
+      results: [
+        { value: "Xk", label: "Inbound Leads" },
+        { value: "1:1 Coaching", label: "Offer Model" },
+        { value: "Y months", label: "Build Window" },
+      ],
+      quote: "The content finally has a job now. People don’t just watch it—they reach out.",
+      quoteName: "Adam Yu",
+      quoteTitle: "Fitness Creator",
+      imageUrl: adamMain,
+      logoUrl: adamFace,
+      logoBadgeClassName: "bg-transparent",
+      logoBadgePaddingClassName: "p-0",
+      logoBadgeRadiusClassName: "rounded-2xl",
+      logoBadgeImageClassName: "h-full w-full object-cover",
+      avatarUrl: adamFace,
+      collageImages: undefined,
+    },
+    "meme-influencer": {
+      title: "CU Chalants",
+      tag: "Creator",
+      summary: "Turned sporadic virality into repeatable reach and steady brand interest.",
+      problem:
+        "Spikes in reach weren’t translating to durable growth — posting was ad-hoc, and there wasn’t a reliable way to turn hits into followers or DMs.",
+      approach: [
+        "Built a small set of repeatable post structures and quick-edit workflows so winning ideas scale without extra effort.",
+        "Launched a lightweight publishing rhythm and templates to remove friction from creation.",
+        "Wrote caption hooks and CTAs designed to convert viral reach into follows and brand inquiries."
+      ],
+      results: [
+        { value: "0 → Xk", label: "Followers" },
+        { value: "3", label: "Months" },
+        { value: "Z%", label: "Reach Lift" },
+      ],
+      quote: "We stopped guessing — the page now repeats hits instead of waiting for them.",
+      quoteName: "CU Chalants",
+      quoteTitle: "Creator",
+      imageUrl: chalantsMain,
+      logoUrl: chalantsFace,
+      logoBadgeClassName: "bg-transparent",
+      logoBadgePaddingClassName: "p-0",
+      logoBadgeRadiusClassName: "rounded-2xl",
+      logoBadgeImageClassName: "h-full w-full object-cover",
+      avatarUrl: chalantsFace,
+      collageImages: undefined,
     },
   };
 
@@ -89,6 +161,10 @@ export function WorkDetail() {
     quoteTitle: "",
     imageUrl: undefined,
     logoUrl: undefined,
+    logoBadgeClassName: undefined,
+    logoBadgePaddingClassName: undefined,
+    logoBadgeRadiusClassName: undefined,
+    logoBadgeImageClassName: undefined,
     avatarUrl: undefined,
     collageImages: undefined,
   };
@@ -122,18 +198,9 @@ export function WorkDetail() {
               {data.summary}
             </p>
           </UpwardReveal>
-          {data.imageUrl && data.logoUrl && (
-            <div className="mt-8 flex items-center gap-3 text-[#F2EFD8]/80">
-              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg border border-[#F2EFD8]/10 bg-[#6b0a0a] p-1">
-                <img
-                  src={data.logoUrl}
-                  alt={`${data.title} logo`}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.12em]">Case study</span>
-            </div>
-          )}
+          <div className="mt-8 flex items-center gap-3 text-[#F2EFD8]/80">
+            <span className="font-mono text-[10px] uppercase tracking-[0.12em]">Case study</span>
+          </div>
         </div>
       </section>
 
@@ -143,20 +210,31 @@ export function WorkDetail() {
             <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-[#F2EFD8]/10 bg-[#F2EFD8]/5 lg:max-w-5xl lg:mx-auto">
               {data.collageImages && data.collageImages.length === 3 ? (
                 <>
-                  <div className="grid h-full w-full grid-cols-3">
-                    {data.collageImages.map((img, idx) => (
-                      <div key={idx} className="relative overflow-hidden">
-                        <img
-                          src={img}
-                          alt={`${data.title} collage ${idx + 1}`}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                    ))}
+                  <div className="grid h-full w-full grid-cols-3 overflow-hidden">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={data.collageImages[0]}
+                        alt={`${data.title} collage 1`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={data.collageImages[1]}
+                        alt={`${data.title} collage 2`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={data.collageImages[2]}
+                        alt={`${data.title} collage 3`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="absolute left-[32.5%] top-[-25%] h-[150%] w-[14px] -translate-x-1/2 rotate-[-12deg] bg-[#0D0C08]/35" />
-                  <div className="absolute left-[67.5%] top-[-25%] h-[150%] w-[14px] -translate-x-1/2 rotate-[-12deg] bg-[#0D0C08]/35" />
-                  <div className="absolute inset-0 bg-[#0D0C08]/10" />
+                  <div className="pointer-events-none absolute left-[33.333%] top-[-20%] z-10 h-[145%] w-[24px] -translate-x-1/2 rotate-[14deg] bg-[#0D0C08] shadow-[0_0_0_1px_rgba(242,239,216,0.18)]" />
+                  <div className="pointer-events-none absolute left-[66.666%] top-[-20%] z-10 h-[145%] w-[24px] -translate-x-1/2 rotate-[14deg] bg-[#0D0C08] shadow-[0_0_0_1px_rgba(242,239,216,0.18)]" />
                 </>
               ) : data.imageUrl ? (
                 <>

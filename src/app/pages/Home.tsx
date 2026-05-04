@@ -38,31 +38,40 @@ export function Home() {
               </p>
             </StaggerItem>
             <StaggerItem>
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-3xl">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-4xl">
                 {[
-                  {
-                    title: "Positioning",
-                    desc: "Clarify your creator POV so your audience knows exactly why you win.",
-                  },
-                  {
-                    title: "Authority content",
-                    desc: "Publish with a system that turns followers into inbound clients.",
-                  },
-                  {
-                    title: "Revenue path",
-                    desc: "Design offers and funnels that convert attention into sales.",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.title}
-                    className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-5"
-                  >
-                    <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#F2EFD8]/50 mb-2">
-                      {item.title}
-                    </div>
-                    <p className="text-[13px] text-[#F2EFD8]/70 leading-[1.6]">{item.desc}</p>
-                  </div>
-                ))}
+                    {
+                      title: "Positioning",
+                      desc: "Audience clarity that shortens the path to conversion.",
+                      href: "/services#brand",
+                    },
+                    {
+                      title: "Authority content",
+                      desc: "Consistent, conversion-first editorial that builds trust.",
+                      href: "/services#content",
+                    },
+                    {
+                      title: "Performance & Audience",
+                      desc: "Targeted scaling with measurable, revenue-aligned metrics.",
+                      href: "/services#performance",
+                    },
+                    {
+                      title: "Monetization",
+                      desc: "Offer and funnel design that converts attention into revenue.",
+                      href: "/services#conversion",
+                    },
+                  ].map((item) => (
+                    <a
+                      key={item.title}
+                      href={item.href}
+                      className="group block border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-5 hover:bg-[#F2EFD8]/[0.04] transition-colors"
+                    >
+                      <div className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#F2EFD8]/50 mb-2">
+                        {item.title}
+                      </div>
+                      <p className="text-[13px] text-[#F2EFD8]/70 leading-[1.6]">{item.desc}</p>
+                    </a>
+                  ))}
               </div>
             </StaggerItem>
           </StaggerContainer>
@@ -88,34 +97,33 @@ export function Home() {
           </StaggerContainer>
         </div>
       </div>
-
-      {/* 3. Who this is for */}
-      <Section label="Who We Help" number="01" id="who-we-help">
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {[
-            {
-              title: "Creators",
-              desc: "You have an audience. We build a premium creator business that converts attention into revenue."
-            },
-            {
-              title: "Founders",
-              desc: "You’ve built something great. Now become the face of your industry so talent, capital, and clients come to you."
-            },
-            {
-              title: "Executives",
-              desc: "You have decades of expertise. We turn that knowledge into thought leadership that opens board seats and advisory roles."
-            }
-          ].map((item, i) => (
-            <StaggerItem key={i} className="flex flex-col">
-              <div className="text-[#F2EFD8]/40 mb-4">
-                <ChevronUp className="w-5 h-5" />
-              </div>
-              <h3 className="text-2xl font-sans font-semibold tracking-[-0.01em] mb-4">{item.title}</h3>
-              <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7]">{item.desc}</p>
-            </StaggerItem>
-          ))}
+      {/* 7. Testimonials */}
+      <Section label="Testimonials" number="01" id="testimonials">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TestimonialCard 
+            quote="Elevative completely changed how my industry sees me. The inbound opportunities have been overwhelming."
+            name="John Smith"
+            role="Founder & CEO"
+            result="Raised $2M Seed"
+            imageUrl="https://images.unsplash.com/photo-1684607776189-24a70a10a804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGZvdW5kZXIlMjBibGFjayUyMHdoaXRlfGVufDF8fHx8MTc3NzgxMzU1MXww&ixlib=rb-4.1.0&q=80&w=1080"
+          />
+          <TestimonialCard 
+            quote="Their editorial eye is unmatched. Finally, someone who can translate my messy thoughts into sharp frameworks."
+            name="Jane Smith"
+            role="VP Product"
+            result="Landed Board Seat"
+            imageUrl="https://images.unsplash.com/photo-1718184310601-eb098434ea99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGV4ZWN1dGl2ZSUyMGJsYWNrJTIwd2hpdGV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+          />
+          <TestimonialCard 
+            quote="I had the audience but no business. Elevative built the entire backend and turned attention into serious revenue."
+            name="Alex Smith"
+            role="Tech Creator"
+            result="$1.2M ARR Built"
+            imageUrl="https://images.unsplash.com/photo-1633286382418-4181cb81a6d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGVzayUyMGFyY2hpdGVjdHxlbnwxfHx8fDE3Nzc4MTM1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          />
         </StaggerContainer>
       </Section>
+      
 
       {/* 4. Services overview */}
       <Section label="Services" number="02" id="services">
@@ -130,22 +138,22 @@ export function Home() {
             {
               name: "Brand Building",
               outcome: "Be instantly clear on who you are and why you win.",
-              href: "/services"
+              href: "/services#brand"
             },
             {
               name: "Content & Social",
               outcome: "Publish with a system that drives inbound, not likes.",
-              href: "/services"
+              href: "/services#content"
             },
             {
               name: "Performance & Audience",
               outcome: "Put your best work in front of the right people.",
-              href: "/services"
+              href: "/services#performance"
             },
             {
               name: "Monetization & Conversion",
               outcome: "Turn followers into paid offers and clients.",
-              href: "/services"
+              href: "/services#conversion"
             }
           ].map((service, i) => (
             <StaggerItem key={i}>
@@ -175,7 +183,7 @@ export function Home() {
               From local trainer to a premium fitness brand.
             </h2>
             <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7] mb-10">
-              We repositioned a gym trainer with a clear POV, rebuilt his content system, and packaged his offer. Within months, he was booking higher‑ticket clients and scaling beyond 1:1 sessions.
+              We repositioned a gym trainer with a clear POV, rebuilt his content system, and packaged his offer. Within months, he was booking higher-ticket clients and scaling beyond 1:1 sessions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
@@ -201,33 +209,34 @@ export function Home() {
           </UpwardReveal>
         </div>
       </Section>
-
-      {/* 7. Testimonials */}
-      <Section label="Testimonials" number="05" id="testimonials">
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <TestimonialCard 
-            quote="Elevative completely changed how my industry sees me. The inbound opportunities have been overwhelming."
-            name="John Smith"
-            role="Founder & CEO"
-            result="Raised $2M Seed"
-            imageUrl="https://images.unsplash.com/photo-1684607776189-24a70a10a804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGZvdW5kZXIlMjBibGFjayUyMHdoaXRlfGVufDF8fHx8MTc3NzgxMzU1MXww&ixlib=rb-4.1.0&q=80&w=1080"
-          />
-          <TestimonialCard 
-            quote="Their editorial eye is unmatched. Finally, someone who can translate my messy thoughts into sharp frameworks."
-            name="Jane Smith"
-            role="VP Product"
-            result="Landed Board Seat"
-            imageUrl="https://images.unsplash.com/photo-1718184310601-eb098434ea99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGV4ZWN1dGl2ZSUyMGJsYWNrJTIwd2hpdGV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-          />
-          <TestimonialCard 
-            quote="I had the audience but no business. Elevative built the entire backend and turned attention into serious revenue."
-            name="Alex Smith"
-            role="Tech Creator"
-            result="$1.2M ARR Built"
-            imageUrl="https://images.unsplash.com/photo-1633286382418-4181cb81a6d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGVzayUyMGFyY2hpdGVjdHxlbnwxfHx8fDE3Nzc4MTM1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          />
+      {/* 3. Who this is for */}
+      <Section label="Who We Help" number="04" id="who-we-help">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {[
+            {
+              title: "Creators",
+              desc: "You have an audience. We build a premium creator business that converts attention into revenue."
+            },
+            {
+              title: "Founders",
+              desc: "You’ve built something great. Now become the face of your industry so talent, capital, and clients come to you."
+            },
+            {
+              title: "Executives",
+              desc: "You have decades of expertise. We turn that knowledge into thought leadership that opens board seats and advisory roles."
+            }
+          ].map((item, i) => (
+            <StaggerItem key={i} className="flex flex-col">
+              <div className="text-[#F2EFD8]/40 mb-4">
+                <ChevronUp className="w-5 h-5" />
+              </div>
+              <h3 className="text-2xl font-sans font-semibold tracking-[-0.01em] mb-4">{item.title}</h3>
+              <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7]">{item.desc}</p>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
       </Section>
+      
 
       {/* 8. Final CTA */}
       <CTASection />
