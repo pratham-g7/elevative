@@ -6,25 +6,25 @@ export function Services() {
   const services = [
     {
       id: "brand",
-      title: "Brand Strategy & Positioning",
+      title: "Brand Strategy\n& Positioning",
       desc: "We don't do fluffy branding. We find the white space in your market and position you as the definitive voice.",
       deliverables: ["Core messaging pillars", "Visual identity & guidelines", "Content operating system", "Audience persona mapping"]
     },
     {
       id: "content",
-      title: "Content & Editorial",
+      title: "Content\n& Editorial",
       desc: "High-leverage writing that builds authority. We extract your insights and frame them with the sharpness of a high-end magazine.",
       deliverables: ["LinkedIn & Twitter ghostwriting", "Long-form essays/newsletters", "Video scriptwriting", "PR & media bylines"]
     },
     {
       id: "performance",
-      title: "Performance & Audience",
+      title: "Performance\n& Audience",
       desc: "We don't rely on hope. We use targeted strategies to ensure the right people—investors, talent, clients—see your content.",
       deliverables: ["Paid amplification", "Network engagement", "Profile optimization", "Growth analytics"]
     },
     {
       id: "conversion",
-      title: "Monetization & Conversion",
+      title: "Monetization\n& Conversion",
       desc: "Followers are vanity metrics. We build the backend systems that turn your newfound attention into actual revenue.",
       deliverables: ["Lead magnet creation", "Funnel design & build", "Email automation", "Offer strategy"]
     }
