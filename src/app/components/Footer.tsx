@@ -4,12 +4,12 @@ import { ChevronUp } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t border-[#F2EFD8]/20 py-12 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex items-center gap-2 text-[#F2EFD8]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+        <div className="flex items-center gap-2 text-[#F2EFD8] md:justify-start justify-center">
           <span className="font-sans font-semibold text-lg tracking-tight">Elevative.</span>
         </div>
         
-        <div className="flex flex-wrap items-center gap-6 font-mono text-[10px] tracking-[0.2em] uppercase text-[#F2EFD8]/40">
+        <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] tracking-[0.2em] uppercase text-[#F2EFD8]/40">
           <Link to="/work" className="hover:text-[#F2EFD8]/80 transition-colors">Our Work</Link>
           <Link to="/services" className="hover:text-[#F2EFD8]/80 transition-colors">Services</Link>
           <Link to="/about" className="hover:text-[#F2EFD8]/80 transition-colors">About</Link>
@@ -17,7 +17,7 @@ export function Footer() {
           <a href="https://www.instagram.com/elevative.in/" className="hover:text-[#F2EFD8]/80 transition-colors">Instagram</a>
         </div>
         
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 md:justify-end justify-center">
           <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#F2EFD8]/40">
             © {new Date().getFullYear()} Elevative
           </span>

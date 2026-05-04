@@ -8,26 +8,42 @@ export function Services() {
     {
       id: "brand",
       title: "Brand Strategy & Positioning",
-      desc: "We don't do fluffy branding. We find the white space in your market and position you as the definitive voice.",
-      deliverables: ["Core messaging pillars", "Visual identity & guidelines", "Content operating system", "Audience persona mapping"]
+      desc: (
+        <>
+          Build a personal brand that pulls inbound demand.
+        </>
+      ),
+      deliverables: ["Positioning scorecard", "Message-to-metric map", "Proof and authority assets", "ICP and buying triggers"]
     },
     {
       id: "content",
       title: "Content & Editorial",
-      desc: "High-leverage writing that builds authority. We extract your insights and frame them with the sharpness of a high-end magazine.",
-      deliverables: ["LinkedIn & Twitter ghostwriting", "Long-form essays/newsletters", "Video scriptwriting", "PR & media bylines"]
+      desc: (
+        <>
+          Authority content engineered for conversion, tied to a KPI trail.
+        </>
+      ),
+      deliverables: ["Conversion-led content briefs", "Founder ghostwriting", "Lead magnet and capture flows", "Editorial cadence and KPI targets"]
     },
     {
       id: "performance",
       title: "Performance & Audience",
-      desc: "We don't rely on hope. We use targeted strategies to ensure the right people—investors, talent, clients—see your content.",
-      deliverables: ["Paid amplification", "Network engagement", "Profile optimization", "Growth analytics"]
+      desc: (
+        <>
+          Audience growth, tracked to X, Y, and Z with weekly signal checks.
+        </>
+      ),
+      deliverables: ["Paid growth experiments", "Audience segmentation and lookalikes", "Landing page conversion instrumentation", "Weekly growth reporting"]
     },
     {
       id: "conversion",
       title: "Monetization & Conversion",
-      desc: "Followers are vanity metrics. We build the backend systems that turn your newfound attention into actual revenue.",
-      deliverables: ["Lead magnet creation", "Funnel design & build", "Email automation", "Offer strategy"]
+      desc: (
+        <>
+          Revenue systems that turn attention into booked calls and sales.
+        </>
+      ),
+      deliverables: ["Funnel architecture and build", "Email and SMS nurture sequences", "Offer testing roadmap", "Pipeline and revenue dashboards"]
     }
   ];
 
@@ -68,7 +84,7 @@ export function Services() {
         <div className="max-w-7xl mx-auto">
           <UpwardReveal>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-semibold tracking-[-0.03em] mb-6 text-[#F2EFD8] max-w-4xl">
-              We build your entire attention ecosystem.
+              Turn attention into <span className="emphasis">revenue</span>
             </h1>
           </UpwardReveal>
         </div>
@@ -101,8 +117,8 @@ export function Services() {
       ))}
 
       <CTASection 
-        headline="Not sure which creator service you need?" 
-        subline="Book a Creator Call and we'll map a custom strategy for your audience and offers."
+        headline="Ready for growth you can measure?" 
+        subline="Book a Creator Call and we will map a KPI-first plan with a clear path to revenue."
       />
     </div>
   );

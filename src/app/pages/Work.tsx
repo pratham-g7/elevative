@@ -2,40 +2,46 @@ import { Section } from "../components/Section";
 import { UpwardReveal, StaggerContainer, StaggerItem } from "../components/UpwardReveal";
 import { CTASection } from "../components/CTASection";
 import { CaseStudyCard } from "../components/CaseStudyCard";
+import kriedMain from "../../imports/kried_main.png";
+import kriedLogo from "../../imports/kried_logo.jpg";
+import abhijitFace from "../../imports/abhijit_face.jpg";
 
 export function Work() {
   const caseStudies = [
     {
-      slug: "tech-founder",
-      client: "Aarav Singh",
-      industry: "Fitness Coach",
-      result: "Grew from 12k to 180k followers and now earns ₹6L/month.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1599388164599-f05e48fe9004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyZSUyMHRleHR1cmV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      slug: "eat-kried",
+      client: "@eat.kried",
+      industry: "Food Truck",
+      result: "Added +Xk followers in Y months and lifted profile-driven demand by Z%.",
+      imageUrl: kriedMain,
+      logoUrl: kriedLogo,
     },
     {
-      slug: "healthcare-exec",
-      client: "Meera Iyer",
-      industry: "Finance Creator",
-      result: "Scaled to 90k followers and ₹4.5L/month in advisory retainers.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1633286382418-4181cb81a6d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtaW5pbWFsaXN0JTIwZGVzayUyMGFyY2hpdGVjdHxlbnwxfHx8fDE3Nzc4MTM1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      slug: "abhijit-gupta",
+      client: "Abhijit Gupta",
+      industry: "Popo Ventures",
+      result: "Built a creator-led brand engine across 3 restaurants and lifted inbound demand by X%.",
+      imageUrl: "",
+      logoUrl: abhijitFace,
+      badgeClassName: "bg-transparent",
+      badgeSizeClassName: "h-14 w-14",
+      badgePaddingClassName: "p-0",
+      badgeRadiusClassName: "rounded-2xl",
+      badgeImageClassName: "h-full w-full object-cover",
     },
     {
       slug: "fintech-creator",
       client: "Rohan Mehta",
       industry: "Tech Educator",
       result: "Launched a paid cohort at ₹8L/month and added 120k followers.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1684607776189-24a70a10a804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwb3J0cmFpdCUyMGZvdW5kZXIlMjBibGFjayUyMHdoaXRlfGVufDF8fHx8MTc3NzgxMzU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "",
     },
     {
       slug: "design-agency",
       client: "Nisha Patel",
       industry: "Lifestyle Creator",
       result: "Repositioned into premium deals: ₹5L/month and +70k followers.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1718184310601-eb098434ea99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwb3J0cmFpdCUyMGV4ZWN1dGl2ZSUyMGJsYWNrJTIwd2hpdGV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "",
     },
   ];
 
@@ -54,10 +60,10 @@ export function Work() {
         </div>
       </section>
 
-      <Section noTopRule>
+      <Section noTopRule className="pt-12 lg:pt-16">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {caseStudies.map((study, i) => (
-            <StaggerItem key={i}>
+              <StaggerItem key={i} className="h-full">
               <CaseStudyCard {...study} />
             </StaggerItem>
           ))}

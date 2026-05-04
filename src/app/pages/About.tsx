@@ -72,21 +72,6 @@ export function About() {
         </StaggerContainer>
       </Section>
 
-      <Section label="Way of Working" number="03">
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {[
-            { title: "No Vanilla Advice", desc: "If it can be Googled, we don't post it." },
-            { title: "Data Wins", desc: "We track everything. Impressions are cute, but pipeline is what matters." },
-            { title: "Radical Candor", desc: "We will tell you if your idea is boring." }
-          ].map((val, i) => (
-            <StaggerItem key={i}>
-              <h3 className="text-xl font-sans font-medium tracking-tight mb-2 text-[#F2EFD8]">{val.title}</h3>
-              <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7] max-w-md">{val.desc}</p>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </Section>
-
       <CTASection />
     </div>
   );

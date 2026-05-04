@@ -1,2 +1,4 @@
 node_modules
-.py
+push.py
+dist/
+.vscode/
