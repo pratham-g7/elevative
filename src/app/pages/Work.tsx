@@ -5,6 +5,10 @@ import { CaseStudyCard } from "../components/CaseStudyCard";
 import kriedMain from "../../imports/kried_main.png";
 import kriedLogo from "../../imports/kried_logo.jpg";
 import abhijitFace from "../../imports/abhijit_face.jpg";
+import adamFace from "../../imports/adam_yu_photo.png";
+import adamMain from "../../imports/adam_yu_main.png";
+import chalantsFace from "../../imports/cu_chalants_photo.png";
+import chalantsMain from "../../imports/cu_chalants.png";
 
 export function Work() {
   const caseStudies = [
@@ -30,18 +34,30 @@ export function Work() {
       badgeImageClassName: "h-full w-full object-cover",
     },
     {
-      slug: "fintech-creator",
-      client: "Rohan Mehta",
-      industry: "Tech Educator",
-      result: "Launched a paid cohort at ₹8L/month and added 120k followers.",
-      imageUrl: "",
+      slug: "gym-influencer",
+      client: "Adam Yu",
+      industry: "Gym Influencer",
+      result: "Introduced a 1:1 coaching program and started shortly hit $Zk/month through inbound leads.",
+      imageUrl: adamMain,
+      logoUrl: adamFace,
+      badgeClassName: "bg-transparent",
+      badgeSizeClassName: "h-14 w-14",
+      badgePaddingClassName: "p-0",
+      badgeRadiusClassName: "rounded-2xl",
+      badgeImageClassName: "h-full w-full object-cover",
     },
     {
-      slug: "design-agency",
-      client: "Nisha Patel",
-      industry: "Lifestyle Creator",
-      result: "Repositioned into premium deals: ₹5L/month and +70k followers.",
-      imageUrl: "",
+      slug: "meme-influencer",
+      client: "CU Chalants",
+      industry: "Creator",
+      result: "Went from 0 to Yk followers in under 3 months.",
+      imageUrl: chalantsMain,
+      logoUrl: chalantsFace,
+      badgeClassName: "bg-transparent",
+      badgeSizeClassName: "h-14 w-14",
+      badgePaddingClassName: "p-0",
+      badgeRadiusClassName: "rounded-2xl",
+      badgeImageClassName: "h-full w-full object-cover",
     },
   ];
 
