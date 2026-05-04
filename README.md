@@ -1,5 +1,5 @@
 
-  # Landing Page for Marketing Agency
+  # Landing Page for Marketing Agency Client
 
   This is a code bundle for Landing Page for Marketing Agency. 
 
