@@ -109,6 +109,7 @@ export function Home() {
             result="50k→250k Followers"
             bgColor="bg-amber-700/40"
           />
+          {/* MADE BY PRATHAM GOPAL */}
           <TestimonialCard 
             quote="Built a SaaS that was solid but had zero visibility. They helped me position myself as someone worth paying attention to in my space. Now advisors are reaching out and we're getting partnership inbound."
             name="Client B"

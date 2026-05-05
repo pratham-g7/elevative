@@ -118,11 +118,11 @@ export function ServicesFlow() {
               id="arrowMarkerVertical"
               markerWidth="8"
               markerHeight="8"
-              refX="4"
+              refX="2"
               refY="4"
               orient="auto"
             >
-              <polyline points="0.5,0 4,4 7.5,0" stroke="#F2EFD8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
+              <polyline points="0,0.5 4,4 0,7.5" stroke="#F2EFD8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
             </marker>
           </defs>
           <path
