@@ -102,9 +102,9 @@ export function ServicesFlow() {
         </div>
       </div>
 
-      <div className="lg:hidden w-full px-6">
+      <div className="lg:hidden relative w-full px-6 pt-4">
         <svg
-          className="mb-8 h-auto w-full"
+          className="pointer-events-none absolute inset-x-0 top-[-68px] z-0 h-[620px] w-full"
           viewBox="0 0 100 620"
           preserveAspectRatio="none"
           aria-hidden="true"
@@ -119,7 +119,7 @@ export function ServicesFlow() {
               markerWidth="8"
               markerHeight="8"
               refX="4"
-              refY="1.5"
+              refY="4"
               orient="auto"
             >
               <polyline points="0.5,0 4,4 7.5,0" stroke="#F2EFD8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
@@ -136,7 +136,7 @@ export function ServicesFlow() {
           />
         </svg>
 
-        <StaggerContainer className="space-y-12">
+        <StaggerContainer className="relative z-10 space-y-12">
           {services.map((service) => (
             <StaggerItem key={service.number}>
               <a href={service.href} className="flex items-start gap-4 group">
