@@ -4,8 +4,10 @@ import { UpwardReveal, StaggerContainer, StaggerItem } from "../components/Upwar
 import { CTASection } from "../components/CTASection";
 import { CaseStudyCard } from "../components/CaseStudyCard";
 import { TestimonialCard } from "../components/TestimonialCard";
+import { ServicesFlow } from "../components/ServicesFlow";
 import { ChevronUp } from "lucide-react";
-
+import danielPhoto from "../../imports/daniel_photo.png";
+import danielIcon from "../../imports/daniel_icon.png";
 export function Home() {
   return (
     <div className="flex flex-col">
@@ -133,52 +135,20 @@ export function Home() {
           </h2>
         </UpwardReveal>
 
-        <StaggerContainer className="flex flex-col gap-6">
-          {[
-            {
-              name: "Brand Building",
-              outcome: "Be instantly clear on who you are and why you win.",
-              href: "/services#brand"
-            },
-            {
-              name: "Content & Social",
-              outcome: "Publish with a system that drives inbound, not likes.",
-              href: "/services#content"
-            },
-            {
-              name: "Performance & Audience",
-              outcome: "Put your best work in front of the right people.",
-              href: "/services#performance"
-            },
-            {
-              name: "Monetization & Conversion",
-              outcome: "Turn followers into paid offers and clients.",
-              href: "/services#conversion"
-            }
-          ].map((service, i) => (
-            <StaggerItem key={i}>
-              <a href={service.href} className="group block flex flex-col md:flex-row md:items-center justify-between border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] hover:bg-[#F2EFD8]/[0.05] p-8 md:p-10 transition-colors">
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-xl md:text-2xl font-sans font-medium tracking-tight group-hover:text-[#F2EFD8] transition-colors text-[#F2EFD8]/90">
-                    {service.name}
-                  </h3>
-                  <p className="text-[#F2EFD8]/50 text-sm">{service.outcome}</p>
-                </div>
-                <div className="mt-6 md:mt-0 flex items-center gap-3 text-[#F2EFD8]/40 group-hover:text-[#F2EFD8] transition-colors">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.1em]">Explore</span>
-                  <ChevronUp className="w-4 h-4 rotate-90" />
-                </div>
-              </a>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+        <ServicesFlow />
       </Section>
 
       {/* 5. Featured case study */}
       <Section label="Featured Work" number="03" id="featured-work">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <UpwardReveal className="order-2 md:order-1">
-            <h2>[SAMPLE TESTIMONIAL]</h2>
+            <div className="flex items-center gap-3 mb-3">
+              <img src={danielIcon} alt="Daniel J Samuel" className="h-10 w-10 rounded-full object-cover" />
+              <div>
+                <div className="font-sans font-semibold">Daniel J Samuel</div>
+                <div className="text-xs text-[#F2EFD8]/50">fitness creator</div>
+              </div>
+            </div>
             <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] mb-6">
               From local trainer to a premium fitness brand.
             </h2>
@@ -201,11 +171,24 @@ export function Home() {
           </UpwardReveal>
           
           <UpwardReveal className="order-1 md:order-2 relative aspect-[4/5] bg-[#F2EFD8]/5 overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1599388164599-f05e48fe9004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyZSUyMHRleHR1cmV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080" 
-              alt="Case study" 
+            <img
+              src={danielPhoto}
+              alt="Daniel case study"
               className="w-full h-full object-cover grayscale opacity-80"
             />
+            <a
+              href="https://www.instagram.com/danieljsamuel_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute left-3 bottom-3 inline-flex items-center gap-2 rounded px-2 py-1 bg-black/20 text-xs text-[#F2EFD8]/60 hover:text-[#F2EFD8]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="#F2EFD8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <span className="leading-none">@danieljsamuel_</span>
+            </a>
           </UpwardReveal>
         </div>
       </Section>

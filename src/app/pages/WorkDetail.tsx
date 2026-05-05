@@ -13,6 +13,8 @@ import smashGuysLogo from "../../imports/smash_guys_logo.jpg";
 import smashGuysImage from "../../imports/smash_guys.png";
 import parisPaniniImage from "../../imports/paris_panini.png";
 import pizzaBakeryImage from "../../imports/pizza_bakery.png";
+import danielPhoto from "../../imports/daniel_photo.png";
+import danielIcon from "../../imports/daniel_icon.png";
 
 export function WorkDetail() {
   const { slug } = useParams();
@@ -145,6 +147,34 @@ export function WorkDetail() {
       logoBadgeRadiusClassName: "rounded-2xl",
       logoBadgeImageClassName: "h-full w-full object-cover",
       avatarUrl: chalantsFace,
+      collageImages: undefined,
+    },
+    "case-study-1": {
+      title: "Daniel J Samuel",
+      tag: "Fitness Creator",
+      summary: "We repositioned a gym trainer with a clear POV, rebuilt his content system, and packaged his offer. Within months, he was booking higher-ticket clients and scaling beyond 1:1 sessions.",
+      problem:
+        "Good work, scattered content. No clear positioning meant engagement didn’t convert to paid offers and client bookings were inconsistent.",
+      approach: [
+        "Clarified brand positioning and a signature POV that made content memorable.",
+        "Built a repeatable content system and weekly calendar focused on transformation-led proof.",
+        "Packaged offers and optimized CTAs to turn followers into paid clients."
+      ],
+      results: [
+        { value: "₹6L", label: "Monthly Revenue" },
+        { value: "+120k", label: "Followers Added" },
+        { value: "3 months", label: "Build Window" },
+      ],
+      quote: "They turned my content into a business — I started booking higher-ticket clients consistently.",
+      quoteName: "Daniel J Samuel",
+      quoteTitle: "Fitness Creator",
+      imageUrl: danielPhoto,
+      logoUrl: undefined,
+      logoBadgeClassName: undefined,
+      logoBadgePaddingClassName: undefined,
+      logoBadgeRadiusClassName: undefined,
+      logoBadgeImageClassName: undefined,
+      avatarUrl: danielIcon,
       collageImages: undefined,
     },
   };

@@ -18,7 +18,7 @@ export function Section({
   children,
   className = "",
   noTopRule = false,
-  gapClassName = "gap-12 lg:gap-24",
+  gapClassName = "gap-8 lg:gap-16",
 }: SectionProps) {
   const hasSidebar = Boolean(number || label);
 
