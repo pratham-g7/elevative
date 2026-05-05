@@ -6,6 +6,7 @@ interface TestimonialCardProps {
   role: string;
   imageUrl?: string;
   result?: string;
+  bgColor?: string;
 }
 
 export function TestimonialCard({
@@ -14,6 +15,7 @@ export function TestimonialCard({
   role,
   imageUrl,
   result,
+  bgColor = "bg-[#F2EFD8]/10",
 }: TestimonialCardProps) {
   return (
     <UpwardReveal className="flex flex-col bg-[#F2EFD8]/[0.03] hover:bg-[#F2EFD8]/[0.08] border border-[#F2EFD8]/10 rounded-2xl p-8 transition-colors duration-500">
@@ -33,8 +35,8 @@ export function TestimonialCard({
         {imageUrl ? (
           <img src={imageUrl} alt={name} className="w-12 h-12 rounded-full object-cover grayscale opacity-80" />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-[#F2EFD8]/10 flex items-center justify-center">
-            <span className="font-sans font-medium text-[#F2EFD8]/50">{name.charAt(0)}</span>
+          <div className={`w-12 h-12 rounded-full ${bgColor} flex items-center justify-center`}>
+            <span className="font-sans font-medium text-[#F2EFD8]/50">{name.charAt(name.length - 1)}</span>
           </div>
         )}
         <div>

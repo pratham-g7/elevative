@@ -101,25 +101,25 @@ export function Home() {
       <Section label="Testimonials" number="01" id="testimonials">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TestimonialCard 
-            quote="Elevative completely changed how my industry sees me. The inbound opportunities have been overwhelming."
-            name="John Smith"
-            role="Founder & CEO"
-            result="Raised $2M Seed"
-            imageUrl="https://images.unsplash.com/photo-1684607776189-24a70a10a804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGZvdW5kZXIlMjBibGFjayUyMHdoaXRlfGVufDF8fHx8MTc3NzgxMzU1MXww&ixlib=rb-4.1.0&q=80&w=1080"
+            quote="I was posting every day but nobody gave a shit. Turns out I had no point of view. Working with them made people actually care what I was saying."
+            name="Client A"
+            role="Content Creator"
+            result="50k→250k Followers"
+            bgColor="bg-amber-700/40"
           />
           <TestimonialCard 
-            quote="Their editorial eye is unmatched. Finally, someone who can translate my messy thoughts into sharp frameworks."
-            name="Jane Smith"
-            role="VP Product"
-            result="Landed Board Seat"
-            imageUrl="https://images.unsplash.com/photo-1718184310601-eb098434ea99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGV4ZWN1dGl2ZSUyMGJsYWNrJTIwd2hpdGV8ZW58MXx8fHwxNzc3ODEzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            quote="Built a SaaS that was solid but had zero visibility. They helped me position myself as someone worth paying attention to in my space. Now advisors are reaching out and we're getting partnership inbound."
+            name="Client B"
+            role="SaaS Founder"
+            result="$8k→$35k MRR"
+            bgColor="bg-cyan-700/40"
           />
           <TestimonialCard 
-            quote="I had the audience but no business. Elevative built the entire backend and turned attention into serious revenue."
-            name="Alex Smith"
-            role="Tech Creator"
-            result="$1.2M ARR Built"
-            imageUrl="https://images.unsplash.com/photo-1633286382418-4181cb81a6d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGVzayUyMGFyY2hpdGVjdHxlbnwxfHx8fDE3Nzc4MTM1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            quote="My content was all over the place. They made me pick a lane and actually commit to something. Now brands approach me instead of me chasing them down."
+            name="Client C"
+            role="Content Creator"
+            result="$3k→$15k Per Brand Deal"
+            bgColor="bg-fuchsia-700/40"
           />
         </StaggerContainer>
       </Section>
