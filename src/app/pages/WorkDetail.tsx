@@ -13,7 +13,7 @@ import smashGuysLogo from "../../imports/smash_guys_logo.jpg";
 import smashGuysImage from "../../imports/smash_guys.png";
 import parisPaniniImage from "../../imports/paris_panini.png";
 import pizzaBakeryImage from "../../imports/pizza_bakery.png";
-import danielPhoto from "../../imports/daniel_photo.png";
+import danielCaseStudy from "../../imports/daniel_case_study.png";
 import danielIcon from "../../imports/daniel_icon.png";
 
 export function WorkDetail() {
@@ -168,7 +168,7 @@ export function WorkDetail() {
       quote: "They turned my content into a business — I started booking higher-ticket clients consistently.",
       quoteName: "Daniel J Samuel",
       quoteTitle: "Fitness Creator",
-      imageUrl: danielPhoto,
+      imageUrl: danielCaseStudy,
       logoUrl: undefined,
       logoBadgeClassName: undefined,
       logoBadgePaddingClassName: undefined,
