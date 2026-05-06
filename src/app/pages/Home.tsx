@@ -4,6 +4,7 @@ import { UpwardReveal, StaggerContainer, StaggerItem } from "../components/Upwar
 import { CTASection } from "../components/CTASection";
 import { CaseStudyCard } from "../components/CaseStudyCard";
 import { TestimonialCard } from "../components/TestimonialCard";
+import InfiniteCarousel from "../components/InfiniteCarousel";
 import { ServicesFlow } from "../components/ServicesFlow";
 import { ChevronUp } from "lucide-react";
 import danielPhoto from "../../imports/daniel_photo.png";
@@ -101,30 +102,68 @@ export function Home() {
       </div>
       {/* 7. Testimonials */}
       <Section label="Testimonials" number="01" id="testimonials">
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <TestimonialCard 
-            quote="I was posting every day but nobody gave a shit. Turns out I had no point of view. Working with them made people actually care what I was saying."
-            name="Client A"
-            role="Content Creator"
-            result="50k→250k Followers"
-            bgColor="bg-amber-700/40"
-          />
-          {/* MADE BY PRATHAM GOPAL */}
-          <TestimonialCard 
-            quote="Built a SaaS that was solid but had zero visibility. They helped me position myself as someone worth paying attention to in my space. Now advisors are reaching out and we're getting partnership inbound."
-            name="Client B"
-            role="SaaS Founder"
-            result="$8k→$35k MRR"
-            bgColor="bg-cyan-700/40"
-          />
-          <TestimonialCard 
-            quote="My content was all over the place. They made me pick a lane and actually commit to something. Now brands approach me instead of me chasing them down."
-            name="Client C"
-            role="Content Creator"
-            result="$3k→$15k Per Brand Deal"
-            bgColor="bg-fuchsia-700/40"
-          />
-        </StaggerContainer>
+        {/* Desktop: manual infinite carousel showing 3 at once */}
+        <div className="hidden lg:block">
+          <InfiniteCarousel visible={3}>
+            <TestimonialCard 
+              quote="I was posting every day but nobody gave a shit. Turns out I had no point of view. Working with them made people actually care what I was saying."
+              name="Client A"
+              role="Content Creator"
+              result="50k→250k Followers"
+              bgColor="bg-amber-700/40"
+            />
+            <TestimonialCard 
+              quote="Built a SaaS that was solid but had zero visibility. They helped me position myself as someone worth paying attention to in my space. Now advisors are reaching out and we're getting partnership inbound."
+              name="Client B"
+              role="SaaS Founder"
+              result="$8k→$35k MRR"
+              bgColor="bg-cyan-700/40"
+            />
+            <TestimonialCard 
+              quote="My content was all over the place. They made me pick a lane and actually commit to something. Now brands approach me instead of me chasing them down."
+              name="Client C"
+              role="Content Creator"
+              result="$3k→$15k Per Brand Deal"
+              bgColor="bg-fuchsia-700/40"
+            />
+            {/* extra template box to ensure 3-up carousel behaves */}
+            <TestimonialCard 
+              quote="We honed my voice and tightened my offers. Demand became predictable and higher-ticket opportunities followed." 
+              name="Client D"
+              role="Fitness Creator"
+              result="₹6L Monthly"
+              bgColor="bg-emerald-700/40"
+            />
+          </InfiniteCarousel>
+        </div>
+
+        {/* Mobile / tablet: keep original grid and testimonial boxes unchanged */}
+        <div className="lg:hidden">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TestimonialCard 
+              quote="I was posting every day but nobody gave a shit. Turns out I had no point of view. Working with them made people actually care what I was saying."
+              name="Client A"
+              role="Content Creator"
+              result="50k→250k Followers"
+              bgColor="bg-amber-700/40"
+            />
+            {/* MADE BY PRATHAM GOPAL */}
+            <TestimonialCard 
+              quote="Built a SaaS that was solid but had zero visibility. They helped me position myself as someone worth paying attention to in my space. Now advisors are reaching out and we're getting partnership inbound."
+              name="Client B"
+              role="SaaS Founder"
+              result="$8k→$35k MRR"
+              bgColor="bg-cyan-700/40"
+            />
+            <TestimonialCard 
+              quote="My content was all over the place. They made me pick a lane and actually commit to something. Now brands approach me instead of me chasing them down."
+              name="Client C"
+              role="Content Creator"
+              result="$3k→$15k Per Brand Deal"
+              bgColor="bg-fuchsia-700/40"
+            />
+          </StaggerContainer>
+        </div>
       </Section>
       
 
@@ -151,10 +190,10 @@ export function Home() {
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-[-0.03em] mb-6">
-              From local trainer to a premium fitness brand.
+              From a fitness influencer struggling with views to multiple brand deals and coaching clients.
             </h2>
             <p className="text-[#F2EFD8]/65 text-[15px] leading-[1.7] mb-10">
-              We repositioned a gym trainer with a clear POV, rebuilt his content system, and packaged his offer. Within months, he was booking higher-ticket clients and scaling beyond 1:1 sessions.
+              We repositioned a fitness influencer with a clear POV, rebuilt his content system, and helped land a clothing brand deal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <div className="border border-[#F2EFD8]/10 bg-[#F2EFD8]/[0.02] p-6">
